@@ -219,3 +219,139 @@ fieldset[disabled].block-search {
     pointer-events: none;
   }
 }
+// Width variables (appears count calculates by raw css)
+@width3: 17%; // Appears 2 times
+
+
+.block.newsletter {
+  max-width: 23%;
+  width: max-content;
+  .actions {
+    display: block;
+    margin-top: 25px;
+    vertical-align: top;
+    width: 1%;
+  }
+  .field {
+    .control {
+      &:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        color: #575757;
+        content: '\e61d';
+        display: inline-block;
+        display: none;
+        font-family: 'luma-icons';
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 32px;
+        margin: 0 0 0 8px;
+        overflow: hidden;
+        speak: none;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+  input {
+    background: #8d8d8d;
+    border-radius: 25px;
+    border: 0px;
+    height: 45px;
+    margin-right: 0px;
+    padding: 0 0 0 35px;
+  }
+  .action.subscribe {
+    background: #008dc7;
+    border-bottom-left-radius: 0;
+    border-radius: 25px;
+    border-top-left-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+    height: 43px;
+    margin-left: -1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    white-space: nowrap;
+  }
+}
+.block {
+  .title {
+    strong {
+      color: white;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+  }
+}
+.page-footer {
+  background: #2d2d2d;
+  margin-top: auto;
+  padding-bottom: 25px;
+}
+.slogan {
+  color: #929292;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.footer.content {
+  .links {
+    display: none;
+    padding-right: 50px;
+    vertical-align: top;
+  }
+}
+.footer_element {
+  color: #989898;
+  display: inline-block;
+}
+div#first {
+  float: left;
+  width: 43%;
+}
+li.subhead {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 15px!important;
+}
+li.subheading2 {
+  font-size: 16px;
+  margin-bottom: 35px!important;
+}
+img#footer_logo {
+  margin-bottom: 20px;
+}
+li.social {
+  img {
+    background: #444444;
+    border-radius: 100px;
+    color: black;
+    margin-right: 10px;
+    padding: 16px 21px;
+  }
+}
+li.headd {
+  color: #f7f7f7;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px!important;
+}
+li.sub {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 21px!important;
+  a {
+    color: #aaaaaa;
+  }
+}
+div#second {
+  float: left;
+  width: @width3;
+}
+div#third {
+  float: left;
+  width: @width3;
+}

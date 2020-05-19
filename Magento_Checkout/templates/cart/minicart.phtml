@@ -17,6 +17,28 @@
 <?php $helper = $this->helper('\Magento\Checkout\Helper\Cart');
     echo $helper->getItemsCount(); ?>
         </span>
+        <?php
+
+
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $cart = $objectManager->get('\Magento\Checkout\Model\Cart'); 
+     
+    // retrieve quote items collection
+    $itemsCollection = $cart->getQuote()->getItemsCollection();
+     
+    // get array of all items what can be display directly
+    $itemsVisible = $cart->getQuote()->getAllVisibleItems();
+     
+    // retrieve quote items array
+    $items = $cart->getQuote()->getAllItems();
+
+    $subTotal = $cart->getQuote()->getSubtotal();
+    $grandTotal = $cart->getQuote()->getGrandTotal();
+?>
+    <div class="subtotal_cart">
+        <?php echo "$".number_format($grandTotal, 2, '.', ''); ?>
+        <div class="downarrow"></div>
+    </div>
     </a>
 
     <?php if ($block->getIsNeedToDisplaySideBar()) :?>
@@ -61,26 +83,3 @@
     }
     </script>
 </div>
-
-<?php
-
-
-    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-    $cart = $objectManager->get('\Magento\Checkout\Model\Cart'); 
-     
-    // retrieve quote items collection
-    $itemsCollection = $cart->getQuote()->getItemsCollection();
-     
-    // get array of all items what can be display directly
-    $itemsVisible = $cart->getQuote()->getAllVisibleItems();
-     
-    // retrieve quote items array
-    $items = $cart->getQuote()->getAllItems();
-
-    $subTotal = $cart->getQuote()->getSubtotal();
-    $grandTotal = $cart->getQuote()->getGrandTotal();
-?>
-    <div class="subtotal_cart">
-        <?php echo "$".number_format($grandTotal, 2, '.', ''); ?>
-        <div class="downarrow"></div>
-    </div>

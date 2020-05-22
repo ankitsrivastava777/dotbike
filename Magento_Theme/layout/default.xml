@@ -23,5 +23,13 @@
         <referenceContainer name="before.body.end">
             <block name="ciptaloka_helloworld.footer.copyright" class="Ciptaloka\HelloWorld\Block\Page\Footer\Copyright" after="copyright" template="html/copyright.phtml"/>
         </referenceContainer>
+        <move element="container" destination="your-class"/>
+        <move element="header" destination="header-wrapper"/>
+        <referenceContainer name="page.bottom.container">
+            <container name="chennai.review" htmlTag="div" htmlClass="review">
+                <block name="require111" class="Magento\Framework\View\Element\Template" template="Magento_Theme::abc.phtml"/>
+            </container>
+        </referenceContainer>
+
     </body>
 </page>

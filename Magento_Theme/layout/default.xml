@@ -10,12 +10,26 @@
     <update handle="default_head_blocks"/>
     <body>
         <block name="require.js" class="Magento\Framework\View\Element\Template" template="Magento_Theme::page/js/require_js.phtml" />
-     <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="header" remove="true"/>
         <referenceBlock name="header.panel">
             <block name="require" class="Magento\Framework\View\Element\Template" template="Magento_Theme::css.phtml" />
         </referenceBlock>
         <referenceBlock name="catalog.topnav">
             <block name="require1" class="Magento\Framework\View\Element\Template" template="Magento_Theme::home.phtml" />
         </referenceBlock>
+        <referenceBlock name="before.body.end">
+            <block name="require11" class="Magento\Framework\View\Element\Template" template="Magento_Theme::copy.phtml" />
+        </referenceBlock>
+        <referenceContainer name="before.body.end">
+            <block name="ciptaloka_helloworld.footer.copyright" class="Ciptaloka\HelloWorld\Block\Page\Footer\Copyright" after="copyright" template="html/copyright.phtml"/>
+        </referenceContainer>
+        <move element="container" destination="your-class"/>
+        <move element="header" destination="header-wrapper"/>
+        <referenceContainer name="page.bottom.container">
+            <container name="chennai.review" htmlTag="div" htmlClass="review">
+                <block name="require111" class="Magento\Framework\View\Element\Template" template="Magento_Theme::abc.phtml"/>
+            </container>
+        </referenceContainer>
+
     </body>
 </page>
